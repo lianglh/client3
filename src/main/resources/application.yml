@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: client3
+  datasource:
+   url: jdbc:mysql://101.132.192.111:3306/dandan?serverTimezone=GMT%2B8
+   driver-class-name: com.mysql.jdbc.Driver
+   username: root
+   password: 123456
+server:
+  port: 8884
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8881/eureka/
+    #instance:
+    # hostname: clientName
+
+mybatis:
+  #typeAliasesPackage: com.xxx.xxxx.domain #实体类包路径
+  mapperLocations: classpath:mapper/*.xml #mapper.xml路径
+
+service:
+  prefix: /service/102
