@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan(basePackages = {"com.dandan.client3.mapper"})
+@MapperScan(basePackages = {"com.dandan.client3"})
 public class Client3Application {
 
     public static void main(String[] args) {

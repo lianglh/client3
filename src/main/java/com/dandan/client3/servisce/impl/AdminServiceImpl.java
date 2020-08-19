@@ -3,6 +3,7 @@ package com.dandan.client3.servisce.impl;
 //import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 
 import com.dandan.client3.entity.Admin;
+import com.dandan.client3.feign.AdminFeign;
 import com.dandan.client3.mapper.AdminMapper;
 import com.dandan.client3.servisce.AdminService;
 import org.springframework.stereotype.Service;
@@ -14,17 +15,19 @@ import javax.annotation.Resource;
 
 @Service
 public class AdminServiceImpl implements AdminService {
-    @Resource
-    AdminMapper adminMapper;
+    //@Resource
+    //AdminMapper adminMapper;
+    //@Resource
+   // AdminFeign adminFeign;
 
     @Override
  //   @LcnTransaction
-    public Admin inserAdmin(Admin admin) throws Exception {
-        String roles=admin.getRoles();
+    public Admin inserAdmin() {
+       // String roles=admin.getRoles();
+        //adminFeign.addAdmin(admin);
+       // adminMapper.insertAdmin();
 
-        adminMapper.insertAdmin(admin);
-
-        return admin;
+        return null;
     }
 
 

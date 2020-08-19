@@ -7,7 +7,7 @@ public interface AdminService {
 
 
 
-    Admin inserAdmin(Admin admin) throws Exception;
+    Admin inserAdmin() ;
 
 
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @FeignClient(value = "client3",fallback = AdminFeignHystrix.class)
 public interface AdminFeign {
-    String API="aaa/adminApi";
+    String API="${service.prefix}/adminApi";
     @PostMapping( value =API+ "/addAdmin" )
     public ResultObject addAdmin(Admin admin);
 }

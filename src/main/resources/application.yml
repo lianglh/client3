@@ -3,7 +3,7 @@ spring:
     name: client3
   datasource:
    url: jdbc:mysql://101.132.192.111:3306/dandan?serverTimezone=GMT%2B8
-   driver-class-name: com.mysql.jdbc.Driver
+   driver-class-name: com.mysql.cj.jdbc.Driver
    username: root
    password: 123456
 server:
@@ -20,4 +20,4 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml #mapper.xml路径
 
 service:
-  prefix: /service/102
+  prefix: /c/102
