@@ -16,8 +16,6 @@ import javax.annotation.Resource;
 public class AdminDaoImpl implements AdminDao {
     @Resource
     AdminMapper adminMapper;
-   // @Resource
-    //AdminFeign adminFeign;
 
     @Override
  //   @LcnTransaction
