@@ -2,7 +2,6 @@ package com.dandan.client3.servisce.impl;
 
 //import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 
-import com.dandan.client3.dao.AdminDao;
 import com.dandan.client3.entity.Admin;
 import com.dandan.client3.feign.AdminFeign;
 import com.dandan.client3.mapper.AdminMapper;
@@ -17,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class AdminServiceImpl implements AdminService {
     @Resource
-    AdminDao adminDao;
+    AdminMapper adminMapper;
     @Resource
     AdminFeign adminFeign;
 
@@ -26,7 +25,7 @@ public class AdminServiceImpl implements AdminService {
     public Admin inserAdmin() {
        // Str   ing roles=admin.getRoles();
         adminFeign.addAdmin(null);
-        adminDao.inserAdmin();
+        adminMapper.insertAdmin();
 
         return null;
     }
