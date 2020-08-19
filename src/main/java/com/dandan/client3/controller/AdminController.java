@@ -22,7 +22,7 @@ public class AdminController {
 
     @Resource
     AdminService adminService;
-    @Autowired
+    @Resource
     AdminFeign clientFeign;
 
     /* 新增用户信息*/
