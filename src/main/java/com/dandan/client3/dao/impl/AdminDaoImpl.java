@@ -1,4 +1,4 @@
-package com.dandan.client3.servisce.impl;
+package com.dandan.client3.dao.impl;
 
 //import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 
@@ -11,22 +11,20 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-import org.springframework.transaction.annotation.Transactional;
-
 
 @Service
-public class AdminServiceImpl implements AdminService {
+public class AdminDaoImpl implements AdminDao {
     @Resource
-    AdminDao adminDao;
-    @Resource
-    AdminFeign adminFeign;
+    AdminMapper adminMapper;
+   // @Resource
+    //AdminFeign adminFeign;
 
     @Override
  //   @LcnTransaction
     public Admin inserAdmin() {
        // Str   ing roles=admin.getRoles();
-        adminFeign.addAdmin(null);
-        adminDao.inserAdmin();
+       // adminFeign.addAdmin(null);
+        adminMapper.insertAdmin();
 
         return null;
     }

@@ -30,7 +30,7 @@ public class AdminController {
     @GetMapping( value = "/addAdmin" )
     public ResultObject addAdmin() throws Exception {
         ResultObject<Admin> resultObject=new ResultObject();
-        //Admin admin=adminService.inserAdmin();
+        Admin admin=adminService.inserAdmin();
 
         return null;
     }

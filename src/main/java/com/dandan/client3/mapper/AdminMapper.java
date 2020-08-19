@@ -7,6 +7,6 @@ import com.dandan.client3.entity.Admin;
 
 public interface AdminMapper {
 
-   // Long insertAdmin();
+    Long insertAdmin();
 
 }
