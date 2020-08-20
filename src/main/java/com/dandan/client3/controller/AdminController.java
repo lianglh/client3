@@ -3,17 +3,13 @@ package com.dandan.client3.controller;
 import com.dandan.client3.common.ResultObject;
 import com.dandan.client3.entity.Admin;
 import com.dandan.client3.feign.AdminFeign;
-import com.dandan.client3.servisce.AdminService;
-import com.google.inject.Inject;
+import com.dandan.client3.service.AdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping("adminApi")
@@ -28,10 +24,11 @@ public class AdminController {
     /* 新增用户信息*/
     @ApiOperation("添加用户")
     @GetMapping( value = "/addAdmin" )
-    public ResultObject addAdmin() throws Exception {
+    public ResultObject addAdmin(@RequestParam String name){
         ResultObject<Admin> resultObject=new ResultObject();
-        Admin admin=adminService.inserAdmin();
+        String  ss=adminService.getJobNumber();
 
+       //String ee= clientFeign.getHello(name);
         return null;
     }
     @GetMapping("hi")

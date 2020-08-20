@@ -1,16 +1,12 @@
-package com.dandan.client3.servisce.impl;
-
-//import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+package com.dandan.client3.service.impl;
 
 import com.dandan.client3.entity.Admin;
 import com.dandan.client3.feign.AdminFeign;
 import com.dandan.client3.mapper.AdminMapper;
-import com.dandan.client3.servisce.AdminService;
+import com.dandan.client3.service.AdminService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
-import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
@@ -20,15 +16,19 @@ public class AdminServiceImpl implements AdminService {
     @Resource
     AdminFeign adminFeign;
 
-    @Override
+ /*   @Override
  //   @LcnTransaction
-    public Admin inserAdmin() {
+    public Admin inserAdmin(String name) {
        // Str   ing roles=admin.getRoles();
-        adminFeign.addAdmin(null);
-        adminMapper.insertAdmin();
-
+       // adminFeign.addAdmin(name);
+        adminMapper.insertAdmin(name);
+        return null;
+    }*/
+    public String getJobNumber(){
+        adminMapper.getJobNumber();
         return null;
     }
+
 
 
 }

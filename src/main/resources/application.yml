@@ -14,14 +14,12 @@ eureka:
       defaultZone: http://localhost:8881/eureka/
     #instance:
     # hostname: clientName
-
 mybatis:
-  #typeAliasesPackage: com.xxx.xxxx.domain #实体类包路径
-  mapperLocations: classpath:mapper/*.xml #mapper.xml路径
-
+  #mapperLocations: #mapper.xml路径
+  type-aliases-package: com.dandan.client3.mapper
+  mapper-locations: classpath:mapper/*.xml
 service:
   prefix: /c/102
-
 feign:
   hystrix:
     enabled: true

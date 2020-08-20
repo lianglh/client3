@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableHystrix
-@MapperScan(basePackages = {"com.dandan.client3"})
+@MapperScan(basePackages = {"com.dandan.client3.mapper"})
 public class Client3Application {
 
     public static void main(String[] args) {
