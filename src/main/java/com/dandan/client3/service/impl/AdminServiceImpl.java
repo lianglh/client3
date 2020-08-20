@@ -25,8 +25,9 @@ public class AdminServiceImpl implements AdminService {
         return null;
     }*/
     public String getJobNumber(){
-        adminMapper.getJobNumber();
-        return null;
+      String dd=  adminMapper.getJobNumber();
+        adminFeign.addAdmin("22");
+        return dd;
     }
 
 

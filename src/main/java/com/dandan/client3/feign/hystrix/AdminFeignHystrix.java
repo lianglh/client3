@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 public class AdminFeignHystrix implements AdminFeign {
 
 
-   /* @Override
+    @Override
     public ResultObject addAdmin(String name) {
         return null;
-    }*/
+    }
 
     @Override
     public String getHello(String name) {
