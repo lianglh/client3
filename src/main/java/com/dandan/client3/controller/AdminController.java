@@ -27,7 +27,6 @@ public class AdminController {
     public String addAdmin(@RequestParam String name){
         ResultObject<Admin> resultObject=new ResultObject();
         String  ss=adminService.inserAdmin(name);
-
        //String ee= clientFeign.getHello(name);
         return ss;
     }
