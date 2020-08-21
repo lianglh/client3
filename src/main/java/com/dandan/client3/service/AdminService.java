@@ -7,7 +7,7 @@ public interface AdminService {
 
 
 
-    //Admin inserAdmin(String name) ;
+    String inserAdmin(String name) ;
 
     String getJobNumber();
 

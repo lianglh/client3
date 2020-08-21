@@ -3,9 +3,9 @@
 <mapper namespace="com.dandan.client3.mapper.AdminMapper">
 
 
-    <!--<insert id="insertAdmin">
+    <insert id="insertAdmin">
         insert into admin (id) values (#{0})
-     </insert>-->
+     </insert>
 
 
     <select id="getJobNumber" parameterType="java.lang.String" resultType="java.lang.String">

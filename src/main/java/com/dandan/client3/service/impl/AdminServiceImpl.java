@@ -1,9 +1,11 @@
 package com.dandan.client3.service.impl;
 
+import com.dandan.client3.common.ResultObject;
 import com.dandan.client3.entity.Admin;
 import com.dandan.client3.feign.AdminFeign;
 import com.dandan.client3.mapper.AdminMapper;
 import com.dandan.client3.service.AdminService;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,17 +18,16 @@ public class AdminServiceImpl implements AdminService {
     @Resource
     AdminFeign adminFeign;
 
- /*   @Override
+    @Override
  //   @LcnTransaction
-    public Admin inserAdmin(String name) {
+    public String inserAdmin(String name) {
        // Str   ing roles=admin.getRoles();
-       // adminFeign.addAdmin(name);
-        adminMapper.insertAdmin(name);
-        return null;
-    }*/
+        String f= adminFeign.addAdmin(name);
+    //   long d= adminMapper.insertAdmin(name);
+        return f;
+    }
     public String getJobNumber(){
       String dd=  adminMapper.getJobNumber();
-        adminFeign.addAdmin("22");
         return dd;
     }
 

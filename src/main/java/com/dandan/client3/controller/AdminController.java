@@ -24,12 +24,12 @@ public class AdminController {
     /* 新增用户信息*/
     @ApiOperation("添加用户")
     @GetMapping( value = "/addAdmin" )
-    public ResultObject addAdmin(@RequestParam String name){
+    public String addAdmin(@RequestParam String name){
         ResultObject<Admin> resultObject=new ResultObject();
-        String  ss=adminService.getJobNumber();
+        String  ss=adminService.inserAdmin(name);
 
        //String ee= clientFeign.getHello(name);
-        return null;
+        return ss;
     }
     @GetMapping("hi")
     public String hi(@RequestParam String name){

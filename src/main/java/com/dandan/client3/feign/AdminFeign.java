@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "client1",fallback = AdminFeignHystrix.class)
 public interface AdminFeign {
     String API="${service.prefix}/adminApi";
-    @GetMapping("c/hello")
-    ResultObject addAdmin(@RequestParam(value = "name") String name);
+    @GetMapping("${service.prefix}")
+    String addAdmin(@RequestParam(value = "name") String name);
 
-    @GetMapping("c/hello")
+    @GetMapping("c/hello1")
     String getHello(@RequestParam(value = "name") String name);
 }

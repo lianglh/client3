@@ -11,8 +11,8 @@ public class AdminFeignHystrix implements AdminFeign {
 
 
     @Override
-    public ResultObject addAdmin(String name) {
-        return null;
+    public String addAdmin(String name) {
+        return name;
     }
 
     @Override
